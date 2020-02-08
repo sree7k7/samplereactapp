@@ -6,7 +6,7 @@ services:
 before_install:
     - docker build -t  sree7k7/samplereactapp -f Dockerfile.dev .
 script:
-    - docker run sree7k7/samplereactapp npm run test -- --coverage
+    - docker run sree7k7/samplereactapp npm run test -- --coverage --watchAll=false
     
 deploy:
   provider: elasticbeanstalk
