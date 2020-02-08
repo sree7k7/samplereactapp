@@ -7,17 +7,10 @@ before_install:
     - docker build -t  sree7k7/samplereactapp -f Dockerfile.dev .
 script:
     - docker run sree7k7/samplereactapp npm run test -- --coverage
-    
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker_startup"
   env: "DockerStartup-env"
   bucket_name: "elasticbeanstalk-us-east-2-506584261757"
-  bucket_path: "docker_startup"
-  on:
-    branch: master
-
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+  bucket_
