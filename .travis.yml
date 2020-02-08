@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t  sree7k7/samplereactapp -f Dockerfile.dev .
+script:
+    - docker run sree7k7/samplereactapp-startup npm run test -- --coverage
+    
