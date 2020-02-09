@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         This is awesome Welcome to Ubuntu website. <h2>hello world</h2>
+         This is front featureawesome Welcome to Ubuntu website. <h2>hello world</h2>
         </p>
         <a
           className="App-link"
